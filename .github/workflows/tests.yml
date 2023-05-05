@@ -116,7 +116,7 @@ jobs:
           path: github-pages
 
       - name: Setup Pages
-        uses: actions/configure-pages@v1
+        uses: actions/configure-pages@v3
 
       - name: Allure report gh-actions
         uses: simple-elf/allure-report-action@v1.6
