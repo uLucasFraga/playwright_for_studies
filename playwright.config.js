@@ -5,7 +5,7 @@ const toMatchSchema = require('./lib/expect-schema')
 expect.extend(toMatchSchema)
 
 const apiServerest = process.env.API_SERVEREST
-const uiServerest = process.env.UI_SERVEREST
+const e2eServerest = process.env.E2E_SERVEREST
 
 process.env.PLAYWRIGHT_EXPERIMENTAL_FEATURES = '1'
 
@@ -28,7 +28,7 @@ export const projects = [
     outputDir: 'test-results',
     testMatch: '**/e2e/*/*.e2e.test.js',
     use: {
-      baseURL: uiServerest,
+      baseURL: e2eServerest,
       browsers: ['chromium'],
       viewport: { width: 1440, height: 900 },
       screenshot: 'only-on-failure',

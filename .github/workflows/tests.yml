@@ -28,6 +28,9 @@ jobs:
         run: yarn test:api:ci
         env:
           FORCE_COLOR: 2
+          API_SERVEREST: ${{ secrets.API_SERVEREST }}
+          USER: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload Allure report
         if: always()
@@ -56,6 +59,9 @@ jobs:
         run: yarn test:e2e:ci
         env:
           FORCE_COLOR: 2
+          E2E_SERVEREST: ${{ secrets.E2E_SERVEREST }}
+          USER: ${{ secrets.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
 
       - name: Upload Allure report
         if: always()

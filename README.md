@@ -101,7 +101,7 @@ Use the data below:
 
 ```env
 API_SERVEREST=https://serverest.dev
-UI_SERVEREST=https://front.serverest.dev
+E2E_SERVEREST=https://front.serverest.dev
 
 USER=fulano@qa.com
 PASSWORD=teste

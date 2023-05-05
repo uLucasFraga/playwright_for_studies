@@ -1,5 +1,4 @@
 const { test, expect } = require('@playwright/test')
-
 const { getUserBody, loginUser } = require('../../../lib/helper')
 
 const user = process.env.USER
