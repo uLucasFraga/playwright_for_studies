@@ -22,12 +22,12 @@ runs:
         restore-keys: |
           ${{ runner.os }}-yarn-
 
-    - name: Install dependencies
-      run: npx playwright install-deps
-      shell: bash
-
     - name: Setup
       run: |
         yarn install --frozen-lockfile
-        npx playwright install
       shell: bash
+      
+    - name: Install playwright browsers
+      run: npx playwright install --with-deps chromium
+      shell: bash
+
