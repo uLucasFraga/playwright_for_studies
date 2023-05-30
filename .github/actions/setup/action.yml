@@ -23,5 +23,11 @@ runs:
           ${{ runner.os }}-yarn-
 
     - name: Install dependencies
-      run: yarn install
+      run: npx playwright install-deps
+      shell: bash
+
+    - name: Setup
+      run: |
+        yarn install --frozen-lockfile
+        npx playwright install
       shell: bash

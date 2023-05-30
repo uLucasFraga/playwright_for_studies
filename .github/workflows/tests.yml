@@ -7,7 +7,10 @@ on:
   workflow_dispatch:
 #  schedule:
 #    - cron:  '30 10 * * 5'
-
+env:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1 # Skip downloading during yarn install
+  PLAYWRIGHT_BROWSERS_PATH: 0 # Places binaries to node_modules/@playwright/test
+  
 jobs:
   api_tests:
     name: API tests
